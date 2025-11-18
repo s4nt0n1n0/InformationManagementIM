@@ -27,15 +27,6 @@ Partial Class Payroll
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Payroll))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Employee = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Position = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Hours = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HourlyRate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Overtime = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GrossPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NetPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Actions = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -55,6 +46,17 @@ Partial Class Payroll
         Me.RoundedPane24 = New InformationManagement.RoundedPane2()
         Me.E = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Employee = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Position = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Hours = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HourlyRate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Overtime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GrossPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NetPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Actions = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Edit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Delete = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +95,7 @@ Partial Class Payroll
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 40
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Employee, Me.Position, Me.Hours, Me.HourlyRate, Me.Overtime, Me.GrossPay, Me.NetPay, Me.Status, Me.Actions})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Employee, Me.Position, Me.Hours, Me.HourlyRate, Me.Overtime, Me.GrossPay, Me.NetPay, Me.Status, Me.Actions, Me.Edit, Me.Delete})
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(34, 276)
         Me.DataGridView1.Name = "DataGridView1"
@@ -110,78 +112,6 @@ Partial Class Payroll
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(1039, 147)
         Me.DataGridView1.TabIndex = 4
-        '
-        'Employee
-        '
-        Me.Employee.Frozen = True
-        Me.Employee.HeaderText = "Employee"
-        Me.Employee.Name = "Employee"
-        Me.Employee.ReadOnly = True
-        Me.Employee.Width = 150
-        '
-        'Position
-        '
-        Me.Position.Frozen = True
-        Me.Position.HeaderText = "Position"
-        Me.Position.Name = "Position"
-        Me.Position.ReadOnly = True
-        Me.Position.Width = 120
-        '
-        'Hours
-        '
-        Me.Hours.Frozen = True
-        Me.Hours.HeaderText = "Hours"
-        Me.Hours.Name = "Hours"
-        Me.Hours.ReadOnly = True
-        '
-        'HourlyRate
-        '
-        Me.HourlyRate.Frozen = True
-        Me.HourlyRate.HeaderText = "Hourly Rate"
-        Me.HourlyRate.Name = "HourlyRate"
-        Me.HourlyRate.ReadOnly = True
-        Me.HourlyRate.Width = 150
-        '
-        'Overtime
-        '
-        Me.Overtime.Frozen = True
-        Me.Overtime.HeaderText = "Overtime"
-        Me.Overtime.Name = "Overtime"
-        Me.Overtime.ReadOnly = True
-        '
-        'GrossPay
-        '
-        Me.GrossPay.Frozen = True
-        Me.GrossPay.HeaderText = "Gross Pay"
-        Me.GrossPay.Name = "GrossPay"
-        Me.GrossPay.ReadOnly = True
-        Me.GrossPay.Width = 120
-        '
-        'NetPay
-        '
-        Me.NetPay.Frozen = True
-        Me.NetPay.HeaderText = "Net Pay"
-        Me.NetPay.Name = "NetPay"
-        Me.NetPay.ReadOnly = True
-        Me.NetPay.Width = 120
-        '
-        'Status
-        '
-        Me.Status.Frozen = True
-        Me.Status.HeaderText = "Status"
-        Me.Status.Name = "Status"
-        Me.Status.ReadOnly = True
-        Me.Status.Width = 120
-        '
-        'Actions
-        '
-        Me.Actions.HeaderText = "Actions"
-        Me.Actions.Name = "Actions"
-        Me.Actions.ReadOnly = True
-        Me.Actions.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Actions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Actions.UseColumnTextForButtonValue = True
-        Me.Actions.Width = 150
         '
         'Label3
         '
@@ -411,6 +341,94 @@ Partial Class Payroll
         Me.Label5.Text = "Employees"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Employee
+        '
+        Me.Employee.Frozen = True
+        Me.Employee.HeaderText = "Employee"
+        Me.Employee.Name = "Employee"
+        Me.Employee.ReadOnly = True
+        Me.Employee.Width = 150
+        '
+        'Position
+        '
+        Me.Position.Frozen = True
+        Me.Position.HeaderText = "Position"
+        Me.Position.Name = "Position"
+        Me.Position.ReadOnly = True
+        Me.Position.Width = 120
+        '
+        'Hours
+        '
+        Me.Hours.Frozen = True
+        Me.Hours.HeaderText = "Hours"
+        Me.Hours.Name = "Hours"
+        Me.Hours.ReadOnly = True
+        '
+        'HourlyRate
+        '
+        Me.HourlyRate.Frozen = True
+        Me.HourlyRate.HeaderText = "Hourly Rate"
+        Me.HourlyRate.Name = "HourlyRate"
+        Me.HourlyRate.ReadOnly = True
+        Me.HourlyRate.Width = 150
+        '
+        'Overtime
+        '
+        Me.Overtime.Frozen = True
+        Me.Overtime.HeaderText = "Overtime"
+        Me.Overtime.Name = "Overtime"
+        Me.Overtime.ReadOnly = True
+        '
+        'GrossPay
+        '
+        Me.GrossPay.Frozen = True
+        Me.GrossPay.HeaderText = "Gross Pay"
+        Me.GrossPay.Name = "GrossPay"
+        Me.GrossPay.ReadOnly = True
+        Me.GrossPay.Width = 120
+        '
+        'NetPay
+        '
+        Me.NetPay.Frozen = True
+        Me.NetPay.HeaderText = "Net Pay"
+        Me.NetPay.Name = "NetPay"
+        Me.NetPay.ReadOnly = True
+        Me.NetPay.Width = 120
+        '
+        'Status
+        '
+        Me.Status.Frozen = True
+        Me.Status.HeaderText = "Status"
+        Me.Status.Name = "Status"
+        Me.Status.ReadOnly = True
+        Me.Status.Width = 120
+        '
+        'Actions
+        '
+        Me.Actions.HeaderText = "Actions"
+        Me.Actions.Image = Global.InformationManagement.My.Resources.Resources.view
+        Me.Actions.Name = "Actions"
+        Me.Actions.ReadOnly = True
+        Me.Actions.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Actions.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Actions.Width = 50
+        '
+        'Edit
+        '
+        Me.Edit.HeaderText = ""
+        Me.Edit.Image = Global.InformationManagement.My.Resources.Resources.editing
+        Me.Edit.Name = "Edit"
+        Me.Edit.ReadOnly = True
+        Me.Edit.Width = 50
+        '
+        'Delete
+        '
+        Me.Delete.HeaderText = ""
+        Me.Delete.Image = Global.InformationManagement.My.Resources.Resources.deletebox
+        Me.Delete.Name = "Delete"
+        Me.Delete.ReadOnly = True
+        Me.Delete.Width = 50
+        '
         'Payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -479,5 +497,7 @@ Partial Class Payroll
     Friend WithEvents GrossPay As DataGridViewTextBoxColumn
     Friend WithEvents NetPay As DataGridViewTextBoxColumn
     Friend WithEvents Status As DataGridViewTextBoxColumn
-    Friend WithEvents Actions As DataGridViewButtonColumn
+    Friend WithEvents Actions As DataGridViewImageColumn
+    Friend WithEvents Edit As DataGridViewImageColumn
+    Friend WithEvents Delete As DataGridViewImageColumn
 End Class

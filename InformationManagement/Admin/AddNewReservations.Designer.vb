@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class PanelCreateReservation
+Partial Class FormAddNewReservation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class PanelCreateReservation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PanelCreateReservation))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAddNewReservation))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,15 +35,15 @@ Partial Class PanelCreateReservation
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnCreateReservation = New System.Windows.Forms.Button()
         Me.cmbEventType = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.txtNote = New InformationManagement.RoundedTextBox()
+        Me.reservationDate = New System.Windows.Forms.DateTimePicker()
+        Me.numGuests = New System.Windows.Forms.NumericUpDown()
+        Me.reservationTime = New System.Windows.Forms.DateTimePicker()
         Me.txtPhone = New InformationManagement.RoundedTextBox()
         Me.txtEmail = New InformationManagement.RoundedTextBox()
         Me.txtFullName = New InformationManagement.RoundedTextBox()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtNote = New InformationManagement.RoundedTextBox()
+        Me.btnClose = New System.Windows.Forms.Button()
+        CType(Me.numGuests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -171,75 +171,48 @@ Partial Class PanelCreateReservation
         Me.cmbEventType.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbEventType.FormattingEnabled = True
         Me.cmbEventType.ItemHeight = 30
+        Me.cmbEventType.Items.AddRange(New Object() {"Birthday Parte\y", "Wedding", "Anniversary", "Corporate Event", "Family Dinner", "Other"})
         Me.cmbEventType.Location = New System.Drawing.Point(270, 279)
         Me.cmbEventType.Name = "cmbEventType"
         Me.cmbEventType.Size = New System.Drawing.Size(192, 36)
         Me.cmbEventType.TabIndex = 16
         '
-        'DateTimePicker1
+        'reservationDate
         '
-        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
-        Me.DateTimePicker1.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(22, 346)
-        Me.DateTimePicker1.MaxDate = New Date(2025, 10, 31, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(182, 25)
-        Me.DateTimePicker1.TabIndex = 17
-        Me.DateTimePicker1.Value = New Date(2025, 10, 31, 0, 0, 0, 0)
+        Me.reservationDate.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
+        Me.reservationDate.CustomFormat = "dd/MM/yyyy"
+        Me.reservationDate.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reservationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.reservationDate.Location = New System.Drawing.Point(22, 346)
+        Me.reservationDate.MaxDate = New Date(2025, 10, 31, 0, 0, 0, 0)
+        Me.reservationDate.Name = "reservationDate"
+        Me.reservationDate.Size = New System.Drawing.Size(182, 25)
+        Me.reservationDate.TabIndex = 17
+        Me.reservationDate.Value = New Date(2025, 10, 31, 0, 0, 0, 0)
         '
-        'NumericUpDown1
+        'numGuests
         '
-        Me.NumericUpDown1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.NumericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDown1.Location = New System.Drawing.Point(24, 279)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(180, 21)
-        Me.NumericUpDown1.TabIndex = 18
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numGuests.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.numGuests.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.numGuests.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.numGuests.Location = New System.Drawing.Point(24, 279)
+        Me.numGuests.Name = "numGuests"
+        Me.numGuests.Size = New System.Drawing.Size(180, 21)
+        Me.numGuests.TabIndex = 18
+        Me.numGuests.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'DateTimePicker2
+        'reservationTime
         '
-        Me.DateTimePicker2.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
-        Me.DateTimePicker2.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(270, 346)
-        Me.DateTimePicker2.MaxDate = New Date(2025, 10, 31, 0, 0, 0, 0)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(192, 25)
-        Me.DateTimePicker2.TabIndex = 20
-        Me.DateTimePicker2.Value = New Date(2025, 10, 31, 0, 0, 0, 0)
-        '
-        'btnClose
-        '
-        Me.btnClose.FlatAppearance.BorderSize = 0
-        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(433, 11)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(29, 27)
-        Me.btnClose.TabIndex = 21
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'txtNote
-        '
-        Me.txtNote.BackColor = System.Drawing.Color.Transparent
-        Me.txtNote.FocusBorderColor = System.Drawing.Color.DarkGray
-        Me.txtNote.Location = New System.Drawing.Point(24, 401)
-        Me.txtNote.MaxLength = 32767
-        Me.txtNote.MinimumSize = New System.Drawing.Size(50, 20)
-        Me.txtNote.Multiline = True
-        Me.txtNote.Name = "txtNote"
-        Me.txtNote.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.txtNote.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNote.Size = New System.Drawing.Size(438, 91)
-        Me.txtNote.TabIndex = 25
-        Me.txtNote.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNote.TextColor = System.Drawing.Color.Black
-        Me.txtNote.TextFont = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.reservationTime.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke
+        Me.reservationTime.CustomFormat = "dd/MM/yyyy"
+        Me.reservationTime.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reservationTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.reservationTime.Location = New System.Drawing.Point(270, 346)
+        Me.reservationTime.MaxDate = New Date(2025, 10, 31, 0, 0, 0, 0)
+        Me.reservationTime.Name = "reservationTime"
+        Me.reservationTime.Size = New System.Drawing.Size(192, 25)
+        Me.reservationTime.TabIndex = 20
+        Me.reservationTime.Value = New Date(2025, 10, 31, 0, 0, 0, 0)
         '
         'txtPhone
         '
@@ -292,7 +265,35 @@ Partial Class PanelCreateReservation
         Me.txtFullName.TextColor = System.Drawing.Color.Black
         Me.txtFullName.TextFont = New System.Drawing.Font("Segoe UI", 10.0!)
         '
-        'PanelCreateReservation
+        'txtNote
+        '
+        Me.txtNote.BackColor = System.Drawing.Color.Transparent
+        Me.txtNote.FocusBorderColor = System.Drawing.Color.DarkGray
+        Me.txtNote.Location = New System.Drawing.Point(24, 416)
+        Me.txtNote.MaxLength = 32767
+        Me.txtNote.MinimumSize = New System.Drawing.Size(50, 20)
+        Me.txtNote.Multiline = True
+        Me.txtNote.Name = "txtNote"
+        Me.txtNote.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.txtNote.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNote.Size = New System.Drawing.Size(438, 58)
+        Me.txtNote.TabIndex = 26
+        Me.txtNote.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtNote.TextColor = System.Drawing.Color.Black
+        Me.txtNote.TextFont = New System.Drawing.Font("Segoe UI", 10.0!)
+        '
+        'btnClose
+        '
+        Me.btnClose.FlatAppearance.BorderSize = 0
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
+        Me.btnClose.Location = New System.Drawing.Point(433, 11)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(29, 27)
+        Me.btnClose.TabIndex = 21
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'FormAddNewReservation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -304,9 +305,9 @@ Partial Class PanelCreateReservation
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtFullName)
         Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.NumericUpDown1)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.reservationTime)
+        Me.Controls.Add(Me.numGuests)
+        Me.Controls.Add(Me.reservationDate)
         Me.Controls.Add(Me.cmbEventType)
         Me.Controls.Add(Me.btnCreateReservation)
         Me.Controls.Add(Me.btnCancel)
@@ -321,10 +322,10 @@ Partial Class PanelCreateReservation
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "PanelCreateReservation"
+        Me.Name = "FormAddNewReservation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddNewReservations"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numGuests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -341,9 +342,9 @@ Partial Class PanelCreateReservation
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnCreateReservation As Button
     Friend WithEvents cmbEventType As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents reservationDate As DateTimePicker
+    Friend WithEvents numGuests As NumericUpDown
+    Friend WithEvents reservationTime As DateTimePicker
     Friend WithEvents btnClose As Button
     Friend WithEvents txtFullName As RoundedTextBox
     Friend WithEvents txtEmail As RoundedTextBox

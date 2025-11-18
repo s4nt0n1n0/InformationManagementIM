@@ -33,12 +33,12 @@ Partial Class FormEditMenu
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.RoundedTextBox3 = New InformationManagement.RoundedTextBox()
+        Me.btnUpdateItem = New System.Windows.Forms.Button()
+        Me.txtxImageUrl = New InformationManagement.RoundedTextBox()
         Me.cmbStatus = New System.Windows.Forms.ComboBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.numericPrice = New System.Windows.Forms.NumericUpDown()
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numericPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClose
@@ -156,34 +156,36 @@ Partial Class FormEditMenu
         Me.Label7.TabIndex = 35
         Me.Label7.Text = "Status"
         '
-        'Button1
+        'btnUpdateItem
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(41, 514)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(427, 43)
-        Me.Button1.TabIndex = 36
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnUpdateItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.btnUpdateItem.FlatAppearance.BorderSize = 0
+        Me.btnUpdateItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdateItem.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateItem.ForeColor = System.Drawing.Color.White
+        Me.btnUpdateItem.Location = New System.Drawing.Point(41, 514)
+        Me.btnUpdateItem.Name = "btnUpdateItem"
+        Me.btnUpdateItem.Size = New System.Drawing.Size(427, 43)
+        Me.btnUpdateItem.TabIndex = 36
+        Me.btnUpdateItem.Text = "Update Item"
+        Me.btnUpdateItem.UseVisualStyleBackColor = False
         '
-        'RoundedTextBox3
+        'txtxImageUrl
         '
-        Me.RoundedTextBox3.BackColor = System.Drawing.Color.Transparent
-        Me.RoundedTextBox3.FocusBorderColor = System.Drawing.Color.DarkGray
-        Me.RoundedTextBox3.Location = New System.Drawing.Point(41, 371)
-        Me.RoundedTextBox3.MaxLength = 32767
-        Me.RoundedTextBox3.MinimumSize = New System.Drawing.Size(50, 20)
-        Me.RoundedTextBox3.Multiline = False
-        Me.RoundedTextBox3.Name = "RoundedTextBox3"
-        Me.RoundedTextBox3.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.RoundedTextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.RoundedTextBox3.Size = New System.Drawing.Size(427, 40)
-        Me.RoundedTextBox3.TabIndex = 37
-        Me.RoundedTextBox3.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
-        Me.RoundedTextBox3.TextColor = System.Drawing.Color.Black
-        Me.RoundedTextBox3.TextFont = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.txtxImageUrl.BackColor = System.Drawing.Color.Transparent
+        Me.txtxImageUrl.FocusBorderColor = System.Drawing.Color.DarkGray
+        Me.txtxImageUrl.Location = New System.Drawing.Point(41, 371)
+        Me.txtxImageUrl.MaxLength = 32767
+        Me.txtxImageUrl.MinimumSize = New System.Drawing.Size(50, 20)
+        Me.txtxImageUrl.Multiline = False
+        Me.txtxImageUrl.Name = "txtxImageUrl"
+        Me.txtxImageUrl.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.txtxImageUrl.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtxImageUrl.Size = New System.Drawing.Size(427, 40)
+        Me.txtxImageUrl.TabIndex = 37
+        Me.txtxImageUrl.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtxImageUrl.TextColor = System.Drawing.Color.Black
+        Me.txtxImageUrl.TextFont = New System.Drawing.Font("Segoe UI", 10.0!)
         '
         'cmbStatus
         '
@@ -198,15 +200,15 @@ Partial Class FormEditMenu
         Me.cmbStatus.Size = New System.Drawing.Size(427, 36)
         Me.cmbStatus.TabIndex = 38
         '
-        'NumericUpDown1
+        'numericPrice
         '
-        Me.NumericUpDown1.AutoSize = True
-        Me.NumericUpDown1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.NumericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.NumericUpDown1.Location = New System.Drawing.Point(41, 247)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(427, 16)
-        Me.NumericUpDown1.TabIndex = 39
+        Me.numericPrice.AutoSize = True
+        Me.numericPrice.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.numericPrice.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.numericPrice.Location = New System.Drawing.Point(41, 247)
+        Me.numericPrice.Name = "numericPrice"
+        Me.numericPrice.Size = New System.Drawing.Size(427, 16)
+        Me.numericPrice.TabIndex = 39
         '
         'cmbCategory
         '
@@ -228,10 +230,10 @@ Partial Class FormEditMenu
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(512, 656)
         Me.Controls.Add(Me.cmbCategory)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.numericPrice)
         Me.Controls.Add(Me.cmbStatus)
-        Me.Controls.Add(Me.RoundedTextBox3)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtxImageUrl)
+        Me.Controls.Add(Me.btnUpdateItem)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -244,8 +246,9 @@ Partial Class FormEditMenu
         Me.Controls.Add(Me.btnClose)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormEditMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormEditMenu"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numericPrice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,9 +264,9 @@ Partial Class FormEditMenu
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents RoundedTextBox3 As RoundedTextBox
+    Friend WithEvents btnUpdateItem As Button
+    Friend WithEvents txtxImageUrl As RoundedTextBox
     Friend WithEvents cmbStatus As ComboBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents numericPrice As NumericUpDown
     Friend WithEvents cmbCategory As ComboBox
 End Class

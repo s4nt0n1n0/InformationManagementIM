@@ -69,4 +69,10 @@ Public Class FormEditMenu
     Private Sub FormEditMenu_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
         Me.Close()
     End Sub
+
+    Private Sub btnUpdateItem_Click(sender As Object, e As EventArgs) Handles btnUpdateItem.Click
+        MessageBox.Show("Item updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
+    End Sub
 End Class

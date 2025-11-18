@@ -1,10 +1,13 @@
 ﻿
 Imports System.Drawing.Drawing2D
 
-Public Class PanelCreateReservation
+Public Class FormAddNewReservation
 
     Private Sub AddNewReservations_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        With NumericUpDown1
+
+
+
+        With numGuests
             .BorderStyle = BorderStyle.FixedSingle
             .BackColor = Color.FromArgb(245, 245, 245) ' Light gray background
             .ForeColor = Color.FromArgb(50, 50, 50)
@@ -20,7 +23,7 @@ Public Class PanelCreateReservation
         End With
 
         ' Remove the border and customize appearance
-        StyleNumericUpDown(NumericUpDown1)
+        StyleNumericUpDown(numGuests)
         RoundButton(btnCreateReservation, 8)
         RoundButton(btnCancel, 8)
         RoundFormCorners(20)
@@ -48,6 +51,19 @@ Public Class PanelCreateReservation
         End If
 
 
+
+        Me.Tag = New With {
+      .FullName = txtFullName.Text,
+      .Email = txtEmail.Text,
+      .Phone = txtPhone.Text,
+      .Guests = numGuests.Text,
+      .EventType = cmbEventType.Text,
+      .DateValue = reservationDate.Value.ToShortDateString(),
+      .TimeValue = reservationTime.Text,
+      .Notes = txtNote.Text
+  }
+
+        ' Close form with OK result
         Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
@@ -69,7 +85,7 @@ Public Class PanelCreateReservation
         Next
     End Sub
 
-    Private Sub NumericUpDown1_Paint(sender As Object, e As PaintEventArgs) Handles NumericUpDown1.Paint
+    Private Sub NumericUpDown1_Paint(sender As Object, e As PaintEventArgs) Handles numGuests.Paint
         Dim nud As NumericUpDown = DirectCast(sender, NumericUpDown)
 
         ' Draw a subtle border
@@ -109,4 +125,6 @@ Public Class PanelCreateReservation
     Private Sub FormAddNewReservations_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
         Me.Close()
     End Sub
+
+
 End Class

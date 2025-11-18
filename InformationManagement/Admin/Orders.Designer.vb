@@ -54,6 +54,7 @@ Partial Class Orders
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
@@ -77,7 +78,6 @@ Partial Class Orders
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.DataGridView1.Size = New System.Drawing.Size(1283, 196)
         Me.DataGridView1.TabIndex = 5
         '
@@ -153,11 +153,11 @@ Partial Class Orders
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
         Me.Edit.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Edit.HeaderText = "Actions"
         Me.Edit.Name = "Edit"
         Me.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Edit.Text = "Edit"
+        Me.Edit.UseColumnTextForButtonValue = True
         '
         'Delete
         '
@@ -168,7 +168,6 @@ Partial Class Orders
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
         Me.Delete.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Delete.HeaderText = ""
         Me.Delete.Name = "Delete"
         Me.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.[True]

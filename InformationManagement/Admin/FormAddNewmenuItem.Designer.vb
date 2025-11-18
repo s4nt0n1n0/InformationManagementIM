@@ -150,6 +150,7 @@ Partial Class FormAddNewmenuItem
         Me.cmbStatus.BackColor = System.Drawing.Color.WhiteSmoke
         Me.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbStatus.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatus.FormattingEnabled = True
         Me.cmbStatus.ItemHeight = 30
         Me.cmbStatus.Items.AddRange(New Object() {"Available", "Unvailable"})
@@ -175,6 +176,7 @@ Partial Class FormAddNewmenuItem
         'numericPrice
         '
         Me.numericPrice.AutoSize = True
+        Me.numericPrice.BackColor = System.Drawing.Color.WhiteSmoke
         Me.numericPrice.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.numericPrice.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numericPrice.Location = New System.Drawing.Point(26, 230)

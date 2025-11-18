@@ -23,7 +23,6 @@ Partial Class FormAddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAddUser))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAddUser = New System.Windows.Forms.Button()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.cmbRole = New System.Windows.Forms.ComboBox()
@@ -35,21 +34,12 @@ Partial Class FormAddUser
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.txtFullName = New InformationManagement.RoundedTextBox()
-        Me.txtPhone = New InformationManagement.RoundedTextBox()
         Me.txtEmail = New InformationManagement.RoundedTextBox()
+        Me.txtPhone = New InformationManagement.RoundedTextBox()
+        Me.txtFullName = New InformationManagement.RoundedTextBox()
+        Me.btnClose = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Add New User"
         '
         'btnAddUser
         '
@@ -177,34 +167,23 @@ Partial Class FormAddUser
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Status"
         '
-        'btnClose
+        'txtEmail
         '
-        Me.btnClose.FlatAppearance.BorderSize = 0
-        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(433, 12)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(29, 27)
-        Me.btnClose.TabIndex = 24
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'txtFullName
-        '
-        Me.txtFullName.BackColor = System.Drawing.Color.Transparent
-        Me.txtFullName.FocusBorderColor = System.Drawing.Color.DarkGray
-        Me.txtFullName.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFullName.Location = New System.Drawing.Point(30, 86)
-        Me.txtFullName.MaxLength = 32767
-        Me.txtFullName.MinimumSize = New System.Drawing.Size(50, 20)
-        Me.txtFullName.Multiline = False
-        Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.txtFullName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtFullName.Size = New System.Drawing.Size(421, 40)
-        Me.txtFullName.TabIndex = 25
-        Me.txtFullName.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtFullName.TextColor = System.Drawing.Color.Black
-        Me.txtFullName.TextFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.BackColor = System.Drawing.Color.Transparent
+        Me.txtEmail.FocusBorderColor = System.Drawing.Color.DarkGray
+        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(30, 158)
+        Me.txtEmail.MaxLength = 32767
+        Me.txtEmail.MinimumSize = New System.Drawing.Size(50, 20)
+        Me.txtEmail.Multiline = False
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtEmail.Size = New System.Drawing.Size(421, 40)
+        Me.txtEmail.TabIndex = 27
+        Me.txtEmail.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtEmail.TextColor = System.Drawing.Color.Black
+        Me.txtEmail.TextFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'txtPhone
         '
@@ -224,23 +203,44 @@ Partial Class FormAddUser
         Me.txtPhone.TextColor = System.Drawing.Color.Black
         Me.txtPhone.TextFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'txtEmail
+        'txtFullName
         '
-        Me.txtEmail.BackColor = System.Drawing.Color.Transparent
-        Me.txtEmail.FocusBorderColor = System.Drawing.Color.DarkGray
-        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(30, 158)
-        Me.txtEmail.MaxLength = 32767
-        Me.txtEmail.MinimumSize = New System.Drawing.Size(50, 20)
-        Me.txtEmail.Multiline = False
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtEmail.Size = New System.Drawing.Size(421, 40)
-        Me.txtEmail.TabIndex = 27
-        Me.txtEmail.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
-        Me.txtEmail.TextColor = System.Drawing.Color.Black
-        Me.txtEmail.TextFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.BackColor = System.Drawing.Color.Transparent
+        Me.txtFullName.FocusBorderColor = System.Drawing.Color.DarkGray
+        Me.txtFullName.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.Location = New System.Drawing.Point(30, 86)
+        Me.txtFullName.MaxLength = 32767
+        Me.txtFullName.MinimumSize = New System.Drawing.Size(50, 20)
+        Me.txtFullName.Multiline = False
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.NormalBorderColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.txtFullName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtFullName.Size = New System.Drawing.Size(421, 40)
+        Me.txtFullName.TabIndex = 25
+        Me.txtFullName.TextBoxBackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtFullName.TextColor = System.Drawing.Color.Black
+        Me.txtFullName.TextFont = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btnClose
+        '
+        Me.btnClose.FlatAppearance.BorderSize = 0
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
+        Me.btnClose.Location = New System.Drawing.Point(433, 12)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(29, 27)
+        Me.btnClose.TabIndex = 24
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(18, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(139, 25)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Add New User"
         '
         'FormAddUser
         '

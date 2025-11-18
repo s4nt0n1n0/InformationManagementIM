@@ -20,18 +20,34 @@
                 Dim username As String = selectedRow.Cells("Name").Value.ToString()
 
                 Dim editForm As New FormEditMenu()
-                ' Pass data to edit form
-                editForm.ShowDialog()
-            End If
+                editForm.txtItemName.Text = selectedRow.Cells("Name").Value.ToString()
+                editForm.txtDescription.Text = selectedRow.Cells("Description").Value.ToString()
+                editForm.cmbCategory.Text = selectedRow.Cells("Category").Value.ToString()
+                editForm.numericPrice.Text = selectedRow.Cells("Price").Value.ToString()
+                editForm.cmbStatus.Text = selectedRow.Cells("Status").Value.ToString()
 
-            ' --- DELETE BUTTON ---
-            If e.ColumnIndex = DataGridMenu.Columns("colDelete").Index Then
+                ' Show form centered
+                editForm.StartPosition = FormStartPosition.CenterParent
+                editForm.ShowDialog()
+
+                ' OPTIONAL: Update DataGridView if form was saved
+                If editForm.DialogResult = DialogResult.OK Then
+                    selectedRow.Cells("Name").Value = editForm.txtItemName.Text
+                    selectedRow.Cells("Description").Value = editForm.txtDescription.Text
+                    selectedRow.Cells("Category").Value = editForm.cmbCategory.Text
+                    selectedRow.Cells("Price").Value = editForm.numericPrice.Text
+                    selectedRow.Cells("Status").Value = editForm.cmbStatus.Text
+                End If
+
+
+                ' --- DELETE BUTTON ---
+            ElseIf e.ColumnIndex = DataGridMenu.Columns("colDelete").Index Then
                 Dim result As DialogResult = MessageBox.Show(
-                "Are you sure you want to delete this item?",
-                "Confirm Delete",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            )
+                    "Are you sure you want to delete this item?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                )
                 If result = DialogResult.Yes Then
                     DataGridMenu.Rows.RemoveAt(e.RowIndex)
                 End If
